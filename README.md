@@ -2,7 +2,12 @@
 Dedicated to users who use Readwise Reader and find it expensive.
 
 ## Usage
-Not implemented.
+I may not upload it to JSR since I was able to get it working in my local environment.
+
+``` sh
+gh clone windchime-yk/readwise-to-raindrop
+deno task dev --csv="assets/readwise/export.csv" --ignoreFeed
+```
 
 ## CSV specifications of each service
 ### Readwise export CSV
