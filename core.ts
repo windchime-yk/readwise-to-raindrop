@@ -44,3 +44,9 @@ export class CsvExtractor {
     );
   }
 }
+
+export class CsvRewriter {
+  public jsonToRaindrop(_data: Record<string, string | string[]>[]): string {
+    throw new Error("Not implemented");
+  }
+}
