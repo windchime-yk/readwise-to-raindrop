@@ -7,6 +7,7 @@
   },
   "exclude": ["README.md", "LICENSE"],
   "imports": {
+    "@std/csv": "jsr:@std/csv@^1.0.5",
     "@std/expect": "jsr:@std/expect@^1.0.13",
     "@std/testing": "jsr:@std/testing@^1.0.9"
   }
