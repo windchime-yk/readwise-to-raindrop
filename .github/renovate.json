@@ -1,6 +1,4 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "local>windchime-yk/renovate-config"
-  ]
+  "extends": ["github>windchime-yk/renovate-config:denovate"]
 }
