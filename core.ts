@@ -1,4 +1,4 @@
-import { parse } from "@std/csv";
+import { parse, stringify } from "@std/csv";
 
 interface ReadwiseCsvToJsonOption {
   csv: string;
@@ -46,7 +46,15 @@ export class CsvExtractor {
 }
 
 export class CsvRewriter {
-  public jsonToRaindrop(_data: Record<string, string | string[]>[]): string {
-    throw new Error("Not implemented");
+  public jsonToRaindrop(data: Record<string, string | string[]>[]): string {
+    const raindropData = data.map((d) => ({
+      title: d.title,
+      url: d.url,
+      tags: d.document_tags.toString(),
+      highlights: "",
+      created: d.saved_date,
+      cover: "",
+    }));
+    return stringify(raindropData, { columns: Object.keys(raindropData[0]) });
   }
 }
